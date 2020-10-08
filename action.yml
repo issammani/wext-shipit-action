@@ -1,0 +1,48 @@
+name: "Wext Shipit Action"
+description: "Automate the process of shipping Web Extensions for Chrome, Firefox, Safari, Opera and Edge"
+author: Issam Mani <issamouu69@gmail.com>
+inputs:
+    # Chrome keys
+    wext-chrome-extension-id:
+        description: "Chrome extension id"
+        required: false
+    wext-chrome-client-id:
+        description: "Chrome client id"
+        required: false
+    wext-chrome-client-secret:
+        description: "Chrome client secret"
+        required: false
+    wext-chrome-refresh-token:
+        description: "Chrome refresh token"
+        required: false
+    # Firefox keys
+    wext-firefox-jwt-issuer:
+        description: "Firefox api key"
+        required: false
+    wext-firefox-jwt-secret:
+        description: "Firefox api secret"
+        required: false
+    #Opera keys
+    wext-opera-email:
+        description: "Opera email"
+        required: false
+    wext-opera-extension-id:
+        description: "Opera extension id"
+        required: false
+    wext-opera-password:
+        description: "Opera password"
+        required: false
+
+runs:
+    using: docker
+    image: Dockerfile
+    env:
+        WEXT_SHIPIT_CHROME_EXTENSION_ID: ${{ inputs.wext-chrome-extension-id}}
+        WEXT_SHIPIT_CHROME_CLIENT_ID: ${{ inputs.wext-chrome-client-id }}
+        WEXT_SHIPIT_CHROME_CLIENT_SECRET: ${{ inputs.wext-chrome-client-secret }}
+        WEXT_SHIPIT_CHROME_REFRESH_TOKEN: ${{ inputs.wext-chrome-refresh-token }}
+        WEXT_SHIPIT_FIREFOX_JWT_ISSUER: ${{ inputs.wext-firefox-jwt-issuer }}
+        WEXT_SHIPIT_FIREFOX_JWT_SECRET: ${{ inputs.wext-firefox-jwt-secret }}
+        WEXT_SHIPIT_OPERA_EMAIL: ${{ inputs.wext-opera-email }}
+        WEXT_SHIPIT_OPERA_EXTENSION_ID: ${{ inputs.wext-opera-extension-id }}
+        WEXT_SHIPIT_OPERA_PASSWORD: ${{ inputs.wext-opera-password }}

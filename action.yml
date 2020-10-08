@@ -15,6 +15,10 @@ inputs:
     wext-chrome-refresh-token:
         description: "Chrome refresh token"
         required: false
+    wext-chrome-src:
+        description: "Location of the extension"
+        required: false
+        default: "."
     # Firefox keys
     wext-firefox-jwt-issuer:
         description: "Firefox api key"
@@ -22,6 +26,10 @@ inputs:
     wext-firefox-jwt-secret:
         description: "Firefox api secret"
         required: false
+    wext-firefox-src:
+        description: "Location of the extension"
+        required: false
+        default: "."
     #Opera keys
     wext-opera-email:
         description: "Opera email"
@@ -32,6 +40,10 @@ inputs:
     wext-opera-password:
         description: "Opera password"
         required: false
+    wext-opera-src:
+        description: "Location of the extension"
+        required: false
+        default: "."
 
 runs:
     using: docker
@@ -46,3 +58,6 @@ runs:
         WEXT_SHIPIT_OPERA_EMAIL: ${{ inputs.wext-opera-email }}
         WEXT_SHIPIT_OPERA_EXTENSION_ID: ${{ inputs.wext-opera-extension-id }}
         WEXT_SHIPIT_OPERA_PASSWORD: ${{ inputs.wext-opera-password }}
+        WEXT_CHROME_SRC: ${{ inputs.wext-chrome-src }}
+        WEXT_FIREFOX_SRC: ${{ inputs.wext-firefox-src }}
+        WEXT_OPERA_SRC: ${{ inputs.wext-opera-src }}

@@ -65,10 +65,10 @@ jobs:
 
 ## Why use this action
 
-    - Say good bye to submitting your extensions manually and add the submission as part of your workflow 🎈🎉!
-    - It combines multiple major browsers (3 as of know) in one.
-    - You needn't to worry about signing, listed signing, zipping...
-    - **TL;DR** Signing listed extensions will fail in firefox but your extension will be updated 😕.
+-   Say good bye to submitting your extensions manually and add the submission as part of your workflow 🎈🎉!
+-   It combines multiple major browsers (3 as of know) in one.
+-   You needn't to worry about signing, listed signing, zipping...
+-   **TL;DR** Signing listed extensions will fail in firefox but your extension will be updated 😕.
 
 ## Contributing
 

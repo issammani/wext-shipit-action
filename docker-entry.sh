@@ -14,21 +14,21 @@ function warn() {
 # Set submit vars depending on supplied env vars
 function set_submit_vars() {
     #Check chrome env vars
-    if [[ -n $WEXT_SHIPIT_CHROME_EXTENSION_ID && -n $WEXT_SHIPIT_CHROME_CLIENT_ID && -n $WEXT_SHIPIT_CHROME_CLIENT_SECRET && -n $WEXT_SHIPIT_CHROME_REFRESH_TOKEN ]]; then
+    if [[ -n "$WEXT_SHIPIT_CHROME_EXTENSION_ID" && -n "$WEXT_SHIPIT_CHROME_CLIENT_ID" && -n "$WEXT_SHIPIT_CHROME_CLIENT_SECRET" && -n "$WEXT_SHIPIT_CHROME_REFRESH_TOKEN" ]]; then
         SUBMIT_CHROME=true
     else
         warn "Note: chrome credentials were not correctly set..."
     fi
 
     # Check firefox env vars
-    if [[ -n $WEXT_SHIPIT_FIREFOX_JWT_ISSUER && -n $WEXT_SHIPIT_FIREFOX_JWT_SECRET ]]; then
+    if [[ -n "$WEXT_SHIPIT_FIREFOX_JWT_ISSUER" && -n "$WEXT_SHIPIT_FIREFOX_JWT_SECRET" ]]; then
         SUBMIT_FIREFOX=true
     else
         warn "Note: firefox credentials were not correctly set..."
     fi
 
     # Check opera env vars
-    if [[ -n $WEXT_SHIPIT_OPERA_EMAIL && -n $WEXT_SHIPIT_OPERA_EXTENSION_ID && -n $WEXT_SHIPIT_OPERA_PASSWORD ]]; then
+    if [[ -n "$WEXT_SHIPIT_OPERA_EMAIL" && -n "$WEXT_SHIPIT_OPERA_EXTENSION_ID" && -n "$WEXT_SHIPIT_OPERA_PASSWORD" ]]; then
         SUBMIT_OPERA=true
     else
         warn "Note: opera credentials were not correctly set..."
